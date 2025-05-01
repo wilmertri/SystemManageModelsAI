@@ -1,11 +1,13 @@
+package entities;
+
 public class Provider {
 
     private int id;
     private String name;
     private String website;
-    private String country;
+    private Country country;
 
-    public Provider(int id, String name, String website, String country){
+    public Provider(int id, String name, String website, Country country){
         this.id = id;
         this.name = name;
         this.website = website;
@@ -40,11 +42,16 @@ public class Provider {
         this.website = website;
     }
 
-    public String getCountry() {
+    public Country getCountry() {
         return country;
     }
 
-    public void setCountry(String country) {
+    public void setCountry(Country country) {
         this.country = country;
+    }
+
+    @Override
+    public String toString() {
+        return "entities.Provider [ID: " + id + ", Name: " + name + ", Website: " + website +", entities.Country: " + country + "]";
     }
 }

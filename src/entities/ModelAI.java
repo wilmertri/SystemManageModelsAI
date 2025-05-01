@@ -1,3 +1,5 @@
+package entities;
+
 public class ModelAI {
     protected String name;
     protected String type;
