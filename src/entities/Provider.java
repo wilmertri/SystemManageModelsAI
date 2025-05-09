@@ -14,6 +14,12 @@ public class Provider {
         this.country = country;
     }
 
+    public Provider(int id, String name, String website){
+        this.id = id;
+        this.name = name;
+        this.website = website;
+    }
+
     public Provider(){
 
     }
