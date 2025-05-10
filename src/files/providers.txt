@@ -1,3 +1,6 @@
 1|OpenAI|www.openai.com|United States
 2|Anthropic|www.anthropic.com|United States
 3|DeepSeek|www.deepseek.com|China
+4|Meta|www.meta.ai|United States
+5|AICol|www.aicol.com.co|Colombia
+6|miProveedor|www.proveedor.com|United States

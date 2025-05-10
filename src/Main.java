@@ -2,12 +2,31 @@ import entities.Country;
 import entities.Dataset;
 import entities.LanguageModel;
 import entities.Provider;
+import repositories.ProviderRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
+        ProviderRepository providerRepository = new ProviderRepository();
+
+        List<Provider> providers = providerRepository.getDataList();
+        for (Provider provider : providers){
+            System.out.println(provider);
+        }
+
+        Country country = new Country(1, "United States");
+        Provider provider1 = new Provider(
+                6,
+                "miProveedor",
+                "www.proveedor.com",
+                country
+        );
+        providerRepository.insertDataLine(provider1);
+
+        /*
         //Create country
         Country unitedStates = new Country("United States");
         //Create providers and datasets
@@ -83,6 +102,8 @@ public class Main {
             System.out.println("ID: " + model.getId()
                     + " - Name Model: " + model.getName());
         }
+        */
+
 
     }
 

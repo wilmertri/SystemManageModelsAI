@@ -58,6 +58,6 @@ public class Provider {
 
     @Override
     public String toString() {
-        return "entities.Provider [ID: " + id + ", Name: " + name + ", Website: " + website +", entities.Country: " + country + "]";
+        return "Provider [ID: " + id + ", Name: " + name + ", Website: " + website +", Country: " + country.getName() + "]";
     }
 }

@@ -1,9 +1,6 @@
 package persistence;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class FileManage {
@@ -34,5 +31,21 @@ public class FileManage {
             e.printStackTrace(System.out);
         }
         return lines;
+    }
+
+    public boolean writeFile(String line){
+        boolean writer = false;
+        try {
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(this.getFile(), true));
+            bufferedWriter.write(line);
+            bufferedWriter.flush();
+            bufferedWriter.close();
+
+            writer = true;
+        }catch (IOException e){
+            e.printStackTrace(System.out);
+        }
+
+        return writer;
     }
 }
